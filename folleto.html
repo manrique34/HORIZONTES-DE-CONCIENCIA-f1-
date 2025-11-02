@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Folleto Educativo - Horizontes de Conciencia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('https://paisajeculturalcafetero.org.co/wp-content/uploads/2022/09/Argelia3-1024x696.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: rgba(255,255,255,0.97);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #0002;
+      padding: 36px 28px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: #00b140;
+      margin-bottom: 18px;
+    }
+    iframe {
+      width: 100%;
+      min-height: 600px;
+      border: 2px solid #00b140;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      background: #fff;
+    }
+    a {
+      color: #2e7d32;
+      text-decoration: none;
+      margin-top: 18px;
+      display: inline-block;
+      font-weight: bold;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header style="padding: 24px 0 10px 0; display: flex; flex-direction: column; align-items: center; background: transparent; position: relative;">
+  <img id="logo-img" src="https://st.depositphotos.com/1026266/4203/i/450/depositphotos_42034505-stock-photo-open-book-with-magical-green.jpg" alt="Logo Horizontes de Conciencia" style="position: fixed; top: 18px; left: 18px; width: 60px; height: 60px; border-radius: 10px; box-shadow: 0 2px 8px #0002; z-index: 1000; background: #fff8; padding: 4px; cursor: pointer; transition: all 0.3s;" onclick="mostrarLogoModal()" />
+    <img id="logo-sena" src="https://yt3.googleusercontent.com/lGolkVwfeyWWpyvb7Ljry29P5CFeYkNEp5EbO2PluoHVlJpVJ-n8UHidF6O0ubhJuqqImFzKHqA=s900-c-k-c0x00ffffff-no-rj" alt="Logo SENA" style="position: fixed; top: 18px; right: 18px; width: 60px; height: 60px; border-radius: 10px; box-shadow: 0 2px 8px #0002; z-index: 1000; background: #fff8; padding: 4px;" />
+  </header>
+  <div class="container">
+    <h1>Folleto Educativo</h1>
+    <iframe src="folleto%20educativo.pdf"></iframe>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+  <script>
+    function mostrarLogoModal() {
+      const modal = document.getElementById('logo-modal');
+      if(modal) modal.style.display = 'flex';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontes de Conciencia en Argelia Antioquia</title>
+    <style>
+        body {
+            background-image: url('https://paisajeculturalcafetero.org.co/wp-content/uploads/2022/09/Argelia3-1024x696.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #00b140 !important; /* Verde más llamativo */
+        }
+    </style>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header style="padding: 24px 0 10px 0; display: flex; flex-direction: column; align-items: center; background: transparent;">
+    <img id="logo-img" src="https://st.depositphotos.com/1026266/4203/i/450/depositphotos_42034505-stock-photo-open-book-with-magical-green.jpg" alt="Logo Horizontes de Conciencia" style="position: fixed; top: 18px; left: 18px; width: 60px; height: 60px; border-radius: 10px; box-shadow: 0 2px 8px #0002; z-index: 1000; background: #fff8; padding: 4px; cursor: pointer; transition: all 0.3s;" onclick="mostrarLogoModal()" />
+    <h1 style="margin: 0; font-size: 1.7rem; color: #2e7d32; font-family: Arial, sans-serif; font-weight: bold; letter-spacing: 1px; background: transparent;">HORIZONTES DE CONCIENCIA</h1>
+    <button id="menu-btn" style="margin-top: 14px; background: #2e7d32; color: #fff; border: none; border-radius: 6px; padding: 8px 18px; font-size: 1rem; cursor: pointer;">Menú</button>
+    <nav id="menu-nav" style="display: none; flex-direction: column; align-items: center; margin-top: 10px; gap: 8px; background: rgba(255,255,255,0.95); border-radius: 8px; box-shadow: 0 2px 8px #0002; padding: 10px 0;">
+        <a href="quienes-somos.html" style="color: #2e7d32; text-decoration: none; font-size: 1rem;">Quiénes somos</a>
+        <a href="proyectos.html" style="color: #2e7d32; text-decoration: none; font-size: 1rem;">Proyectos</a>
+        <a href="areas-protegidas-cornare.html" style="color: #2e7d32; text-decoration: none; font-size: 1rem;">Áreas protegidas por Cornare</a>
+        <a href="como-cultivar.html" style="color: #2e7d32; text-decoration: none; font-size: 1rem;">Cómo cultivar</a>
+        <a href="bonificaciones-cornare.html" style="color: #2e7d32; text-decoration: none; font-size: 1rem;">Bonificaciones de Cornare por recuperación de áreas dañadas</a>
+        <button onclick="window.location.href='comentarios.html'" style="margin-top: 18px; background: #2e7d32; color: #fff; border: none; border-radius: 6px; padding: 8px 18px; font-size: 1rem; cursor: pointer; width: 90%;">Comentar</button>
+        <button onclick="window.location.href='contador.html'" style="margin-top: 10px; background: #388e3c; color: #fff; border: none; border-radius: 6px; padding: 8px 18px; font-size: 1rem; cursor: pointer; width: 90%;">Ver cantidad de suscriptores</button>
+        <button onclick="window.location.href='mapa-argelia.html'" style="margin-top: 10px; background: #00b140; color: #fff; border: none; border-radius: 6px; padding: 8px 18px; font-size: 1rem; cursor: pointer; width: 90%;">Mapa de Argelia</button>
+    </nav>
+</header>
+<!-- Modal para mostrar el logo agrandado -->
+<div id="logo-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:2000; justify-content:center; align-items:center;">
+    <div style="background:#fff; border-radius:16px; padding:32px 24px 18px 24px; box-shadow:0 4px 24px #0005; display:flex; flex-direction:column; align-items:center; max-width:90vw; max-height:90vh;">
+        <img src='https://st.depositphotos.com/1026266/4203/i/450/depositphotos_42034505-stock-photo-open-book-with-magical-green.jpg' alt='Logo grande' style='width:220px; max-width:80vw; border-radius:14px; box-shadow:0 2px 12px #0003; margin-bottom:18px;'>
+        <span style='font-size:1.3rem; color:#2e7d32; font-weight:bold; margin-bottom:10px;'>ESTE ES NUESTRO LOGO</span>
+        <button onclick="document.getElementById('logo-modal').style.display='none'" style="background:#2e7d32; color:#fff; border:none; border-radius:8px; padding:8px 22px; font-size:1rem; cursor:pointer;">Cerrar</button>
+    </div>
+</div>
+<script>
+    const btn = document.getElementById('menu-btn');
+    const nav = document.getElementById('menu-nav');
+    btn.onclick = () => {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    };
+
+    function mostrarLogoModal() {
+        document.getElementById('logo-modal').style.display = 'flex';
+    }
+</script>
+</body>
+</html>
+```

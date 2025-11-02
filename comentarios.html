@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Comentar - HORIZONTES DE CONCIENCIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('https://paisajeculturalcafetero.org.co/wp-content/uploads/2022/09/Argelia3-1024x696.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 420px;
+      margin: 60px auto;
+      background: rgba(255,255,255,0.95);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #0002;
+      padding: 32px 24px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 18px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #00b140 !important; /* Verde más llamativo */
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #bdbdbd;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    button {
+      background: #2e7d32;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 9px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 6px;
+    }
+    #mensaje {
+      color: #2e7d32;
+      font-size: 1.1rem;
+      margin-top: 18px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .oculto { display: none; }
+    .comentario {
+      background: #e8f5e9;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-bottom: 8px;
+    }
+    a {
+      color: #2e7d32;
+      text-decoration: none;
+      margin-top: 18px;
+      display: inline-block;
+    }
+    /* Estilos para el modal del logo */
+    #logo-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.6);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+    #logo-modal > div {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 24px 18px 24px;
+      box-shadow: 0 4px 24px #0005;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+    #logo-modal img {
+      width: 220px;
+      max-width: 80vw;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #0003;
+      margin-bottom: 18px;
+    }
+    #logo-modal span {
+      font-size: 1.3rem;
+      color: #2e7d32;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    #logo-modal button {
+      background: #2e7d32;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 22px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header style="padding: 24px 0 10px 0; display: flex; flex-direction: column; align-items: center; background: transparent; position: relative;">
+  <img id="logo-img" src="https://st.depositphotos.com/1026266/4203/i/450/depositphotos_42034505-stock-photo-open-book-with-magical-green.jpg" alt="Logo Horizontes de Conciencia" style="position: fixed; top: 18px; left: 18px; width: 60px; height: 60px; border-radius: 10px; box-shadow: 0 2px 8px #0002; z-index: 1000; background: #fff8; padding: 4px; cursor: pointer; transition: all 0.3s;" onclick="mostrarLogoModal()" />
+    <img id="logo-sena" src="https://yt3.googleusercontent.com/lGolkVwfeyWWpyvb7Ljry29P5CFeYkNEp5EbO2PluoHVlJpVJ-n8UHidF6O0ubhJuqqImFzKHqA=s900-c-k-c0x00ffffff-no-rj" alt="Logo SENA" style="position: fixed; top: 18px; right: 18px; width: 60px; height: 60px; border-radius: 10px; box-shadow: 0 2px 8px #0002; z-index: 1000; background: #fff8; padding: 4px;" />
+  </header>
+  <!-- Modal para mostrar el logo agrandado -->
+  <div id="logo-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:2000; justify-content:center; align-items:center;">
+    <div style="background:#fff; border-radius:16px; padding:32px 24px 18px 24px; box-shadow:0 4px 24px #0005; display:flex; flex-direction:column; align-items:center; max-width:90vw; max-height:90vh;">
+      <img src='https://st.depositphotos.com/1026266/4203/i/450/depositphotos_42034505-stock-photo-open-book-with-magical-green.jpg' alt='Logo grande' style='width:220px; max-width:80vw; border-radius:14px; box-shadow:0 2px 12px #0003; margin-bottom:18px;'>
+      <span style='font-size:1.3rem; color:#2e7d32; font-weight:bold; margin-bottom:10px;'>ESTE ES NUESTRO LOGO</span>
+      <button onclick="document.getElementById('logo-modal').style.display='none'" style="background:#2e7d32; color:#fff; border:none; border-radius:8px; padding:8px 22px; font-size:1rem; cursor:pointer;">Cerrar</button>
+    </div>
+  </div>
+  <div class="container">
+    <h2>Registrarse</h2>
+    <form id="registro-form">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="correo" placeholder="Tu correo" required>
+      <select id="zona" required>
+        <option value="">¿Zona?</option>
+        <option value="urbana">Urbana</option>
+        <option value="rural">Rural</option>
+        <option value="otro">Otro</option>
+      </select>
+      <input type="text" id="vereda" placeholder="¿Cuál vereda?" class="oculto">
+      <input type="text" id="ciudad" placeholder="¿Ciudad o país?" class="oculto">
+      <button type="submit">Registrarse</button>
+    </form>
+    <form id="comentario-form" class="oculto">
+      <label for="opinion">Selecciona tu opinión:</label>
+      <select id="opinion" required>
+        <option value="">Selecciona...</option>
+        <option value="Muy bueno">Muy bueno</option>
+        <option value="Bueno">Bueno</option>
+        <option value="Malo">Malo</option>
+        <option value="Muy malo">Muy malo</option>
+      </select>
+      <textarea id="motivo" class="oculto" rows="3" placeholder="¿Por qué? (obligatorio si es malo o muy malo)"></textarea>
+      <button type="submit">Enviar comentario</button>
+    </form>
+    <div id="mensaje" style="display:none;"></div>
+    <div id="comentarios-lista" style="margin-top: 18px;"></div>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+  <script>
+    // Registro y control de usuario
+    const registroForm = document.getElementById('registro-form');
+    const comentarioForm = document.getElementById('comentario-form');
+    const opinionSel = document.getElementById('opinion');
+    const motivo = document.getElementById('motivo');
+    const mensaje = document.getElementById('mensaje');
+    const zona = document.getElementById('zona');
+    const vereda = document.getElementById('vereda');
+    const ciudad = document.getElementById('ciudad');
+    let usuario = JSON.parse(localStorage.getItem('usuario'));
+    // Mostrar campos según zona
+    zona.onchange = function() {
+      vereda.classList.add('oculto');
+      ciudad.classList.add('oculto');
+      vereda.required = false;
+      ciudad.required = false;
+      if (zona.value === 'rural') {
+        vereda.classList.remove('oculto');
+        vereda.required = true;
+      } else if (zona.value === 'otro') {
+        ciudad.classList.remove('oculto');
+        ciudad.required = true;
+      }
+    };
+    registroForm.onsubmit = function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const zonaVal = zona.value;
+      const veredaVal = vereda.value.trim();
+      const ciudadVal = ciudad.value.trim();
+      let ubicacion = '';
+      if (zonaVal === 'rural') ubicacion = 'Vereda: ' + veredaVal;
+      else if (zonaVal === 'otro') ubicacion = 'Ciudad/País: ' + ciudadVal;
+      else ubicacion = 'Urbana';
+      if (nombre && correo && zonaVal && ((zonaVal === 'rural' && veredaVal) || (zonaVal === 'otro' && ciudadVal) || zonaVal === 'urbana')) {
+        usuario = {nombre, correo, zona: zonaVal, ubicacion};
+        let usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+        usuarios.push(usuario);
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        localStorage.setItem('usuario', JSON.stringify(usuario));
+        registroForm.style.display = 'none';
+        comentarioForm.classList.remove('oculto');
+        mensaje.style.display = 'none';
+      }
+    };
+    opinionSel.onchange = function() {
+      if (opinionSel.value === 'Malo' || opinionSel.value === 'Muy malo') {
+        motivo.classList.remove('oculto');
+        motivo.required = true;
+      } else {
+        motivo.classList.add('oculto');
+        motivo.required = false;
+        motivo.value = '';
+      }
+    };
+    comentarioForm.onsubmit = function(e) {
+      e.preventDefault();
+      if (!usuario) return;
+      const opinion = opinionSel.value;
+      const motivoVal = motivo.value.trim();
+      if ((opinion === 'Malo' || opinion === 'Muy malo') && !motivoVal) {
+        motivo.focus();
+        return;
+      }
+      const comentarios = JSON.parse(localStorage.getItem('comentarios') || '[]');
+      comentarios.push({
+        nombre: usuario.nombre,
+        ubicacion: usuario.ubicacion,
+        opinion,
+        motivo: (opinion === 'Malo' || opinion === 'Muy malo') ? motivoVal : ''
+      });
+      localStorage.setItem('comentarios', JSON.stringify(comentarios));
+      comentarioForm.reset();
+      mensaje.textContent = '¡Gracias por tu comentario, ' + usuario.nombre + '!';
+      mensaje.style.display = 'block';
+      mostrarComentarios();
+    };
+    // Mostrar comentarios
+    function mostrarComentarios() {
+      const lista = document.getElementById('comentarios-lista');
+      lista.innerHTML = '';
+      const comentarios = JSON.parse(localStorage.getItem('comentarios') || '[]');
+      comentarios.forEach(obj => {
+        const div = document.createElement('div');
+        div.className = 'comentario';
+        let html = `<b>${obj.nombre} (${obj.ubicacion}):</b> <span style='color:#2e7d32'>${obj.opinion}</span>`;
+        if(obj.motivo && (obj.opinion === 'Malo' || obj.opinion === 'Muy malo')) {
+          html += `<br><span style='font-size:0.97em;'>Motivo: ${obj.motivo}</span>`;
+        }
+        div.innerHTML = html;
+        lista.appendChild(div);
+      });
+    }
+    mostrarComentarios();
+    // Mostrar usuarios registrados solo al admin
+    function mostrarUsuariosRegistrados() {
+      const usuario = JSON.parse(localStorage.getItem('usuario'));
+      const esAdmin = usuario && usuario.correo === 'miguelmanrique12345fddd@gmail.com';
+      const adminDiv = document.getElementById('admin-usuarios');
+      if (adminDiv && esAdmin) {
+        adminDiv.style.display = 'block';
+        const lista = document.getElementById('lista-usuarios');
+        lista.innerHTML = '';
+        const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+        usuarios.forEach(u => {
+          const li = document.createElement('li');
+          li.textContent = `${u.nombre} (${u.ubicacion}) - ${u.correo}`;
+          lista.appendChild(li);
+        });
+      }
+    }
+    mostrarUsuariosRegistrados();
+    // Contador de usuarios registrados
+    function mostrarContadorUsuarios() {
+      const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+      const contador = document.getElementById('contador-usuarios');
+      if (contador) contador.textContent = `Personas registradas: ${usuarios.length}`;
+    }
+    mostrarContadorUsuarios();
+    // Actualizar contador al registrar
+    if (registroForm) {
+      registroForm.addEventListener('submit', function() {
+        setTimeout(mostrarContadorUsuarios, 100);
+      });
+    }
+    // Función para mostrar el modal del logo
+    function mostrarLogoModal() {
+      document.getElementById('logo-modal').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>

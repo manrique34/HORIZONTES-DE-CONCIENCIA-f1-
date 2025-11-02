@@ -1,0 +1,47 @@
+/* Stylesheet para establecer la imagen de fondo del sitio.
+   Guarda la imagen adjunta como `assets/background.jpg` en el mismo directorio que este archivo. */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* Usar primero la URL que proporcionaste, luego el archivo local assets/background.jpg
+    y como último recurso la imagen pública anterior. */
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKPJk8ckYcE3-TNDophWuahOhp3B-DBLeYQ&s'), url('background.jpg'), url('https://paisajeculturalcafetero.org.co/wp-content/uploads/2022/09/Argelia3-1024x696.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* Overlay ligero para mejorar legibilidad del texto sobre la imagen */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* Aumentamos la opacidad del overlay para que el fondo se vea más claro y el texto gane legibilidad */
+  background: rgba(255,255,255,0.55);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Asegurar que el contenido principal quede por encima del overlay */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ajustes rápidos para elementos que usen fondo blanco en las tarjetas */
+.container, .fondo-overlay {
+  /* Hacer las tarjetas ligeramente más opacas para destacar sobre el fondo */
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Pequeñas mejoras de contraste para títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #2e7d32 !important;
+}

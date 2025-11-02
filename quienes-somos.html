@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiénes somos - Horizontes de Conciencia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('https://paisajeculturalcafetero.org.co/wp-content/uploads/2022/09/Argelia3-1024x696.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .fondo-overlay {
+      background: rgba(255,255,255,0.65);
+      min-height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+    .container { max-width: 700px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #0001; padding: 32px; }
+    h1, h2, h3, h4, h5, h6 {
+      color: #00b140 !important; /* Verde más llamativo */
+    }
+    a { color: #2e7d32; text-decoration: none; }
+  </style>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="fondo-overlay">
+    <header style="padding: 24px 0 10px 0; display: flex; flex-direction: column; align-items: center; background: transparent; position: relative;">
+  <img id="logo-img" src="https://st.depositphotos.com/1026266/4203/i/450/depositphotos_42034505-stock-photo-open-book-with-magical-green.jpg" alt="Logo Horizontes de Conciencia" style="position: fixed; top: 18px; left: 18px; width: 60px; height: 60px; border-radius: 10px; box-shadow: 0 2px 8px #0002; z-index: 1000; background: #fff8; padding: 4px; cursor: pointer; transition: all 0.3s;" onclick="mostrarLogoModal()" />
+      <img id="logo-sena" src="https://yt3.googleusercontent.com/lGolkVwfeyWWpyvb7Ljry29P5CFeYkNEp5EbO2PluoHVlJpVJ-n8UHidF6O0ubhJuqqImFzKHqA=s900-c-k-c0x00ffffff-no-rj" alt="Logo SENA" style="position: fixed; top: 18px; right: 18px; width: 60px; height: 60px; border-radius: 10px; box-shadow: 0 2px 8px #0002; z-index: 1000; background: #fff8; padding: 4px;" />
+      <!-- Modal para mostrar el logo agrandado -->
+      <div id="logo-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:2000; justify-content:center; align-items:center;">
+        <div style="background:#fff; border-radius:16px; padding:32px 24px 18px 24px; box-shadow:0 4px 24px #0005; display:flex; flex-direction:column; align-items:center; max-width:90vw; max-height:90vh;">
+          <img src='https://st.depositphotos.com/1026266/4203/i/450/depositphotos_42034505-stock-photo-open-book-with-magical-green.jpg' alt='Logo grande' style='width:220px; max-width:80vw; border-radius:14px; box-shadow:0 2px 12px #0003; margin-bottom:18px;'>
+          <span style='font-size:1.3rem; color:#2e7d32; font-weight:bold; margin-bottom:10px;'>ESTE ES NUESTRO LOGO</span>
+          <button onclick="document.getElementById('logo-modal').style.display='none'" style="background:#2e7d32; color:#fff; border:none; border-radius:8px; padding:8px 22px; font-size:1rem; cursor:pointer;">Cerrar</button>
+        </div>
+      </div>
+      <script>
+      function mostrarLogoModal() {
+        document.getElementById('logo-modal').style.display = 'flex';
+      }
+      </script>
+      <div style="text-align:center; margin-bottom: 18px;">
+        <span style="display:block; font-size:2rem; font-weight:bold; color:#2e7d32; letter-spacing:2px;">AÑO DE FUNDACION</span>
+        <span style="display:block; font-size:2.5rem; font-weight:bold; color:#388e3c; margin-top:4px;">2025</span>
+      </div>
+      <div style="text-align:center; margin: 32px 0 18px 0;">
+        <span style="display:block; font-size:1.7rem; font-weight:bold; color:#2e7d32; letter-spacing:2px;">NUESTROS FUNDADORES</span>
+        <div style="margin-top:18px; display:flex; flex-direction:column; gap:16px; align-items:center;">
+          <div>
+            <span style="font-size:1.2rem; font-weight:bold; color:#388e3c;">MIGUEL ANGEL MANRIQUE</span><br>
+            <span style="font-size:1rem; color:#444;">17 AÑOS</span>
+          </div>
+          <div>
+            <span style="font-size:1.2rem; font-weight:bold; color:#388e3c;">FERNANDO ZULUAGA</span><br>
+            <span style="font-size:1rem; color:#444;">17 AÑOS</span>
+          </div>
+          <div>
+            <span style="font-size:1.2rem; font-weight:bold; color:#388e3c;">NILTON ESTEBAN</span><br>
+            <span style="font-size:1rem; color:#444;">18 AÑOS</span>
+          </div>
+          <div>
+            <span style="font-size:1.2rem; font-weight:bold; color:#388e3c;">MIGUEL ANGEL CARMONA</span><br>
+            <span style="font-size:1rem; color:#444;">17 AÑOS</span>
+          </div>
+        </div>
+        <div style="margin-top:30px;">
+          <span style="display:block; font-size:1.3rem; font-weight:bold; color:#2e7d32; letter-spacing:1px;">NUESTRO LEMA</span>
+          <span style="display:block; font-size:1.1rem; color:#388e3c; margin-top:8px;">LA CONCIENCIA FLORECE EN CADA ACCIÓN</span>
+        </div>
+      </div>
+      <p>Somos un equipo comprometido con el desarrollo educativo y la concientización social a través del proyecto "Horizontes de Conciencia" del SENA. Nuestra misión es empoderar a las comunidades mediante la educación, fomentando un ambiente de confianza y colaboración que inspire a todos a participar activamente en el aprendizaje y el crecimiento colectivo.</p>
+      <div style="text-align:center; margin-top: 24px;">
+        <span style="font-size:1.1rem; color:#2e7d32; font-weight:bold; letter-spacing:1px;">INSTITUCIÓN EDUCATIVA SANTA TEREZA ARGELIA ANTIOQUIA</span>
+      </div>
+      <a href="index.html">Volver al inicio</a>
+    </div>
+  </div>
+</body>
+</html>

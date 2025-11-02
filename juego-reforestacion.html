@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Reforestación Mejorado</title>
+  <style>
+    body { background: #e8fbe8; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #0001; padding: 32px; }
+    h1 { color: #00b140; }
+    .volver { margin-top: 24px; display: block; }
+    .info { margin-bottom: 18px; color: #333; }
+    #game-area { min-height: 380px; min-width: 380px; border: 2px solid #009e2b; position:relative; background-color: #7be27b; }
+    .level-info { font-weight: bold; color: #009e2b; margin-bottom: 10px; }
+    .score-info { font-weight: bold; color: #2e7d32; margin-bottom: 10px; }
+    .tree-anim { position: absolute; width: 48px; height: 72px; left: var(--x,50%); top: var(--y,60%); transform: translate(-50%, -50%) scaleY(0.1) scaleX(0.7); transition: transform 1.2s cubic-bezier(.4,2,.6,1); z-index:2; }
+    .tree-anim.grow { transform: translate(-50%, -50%) scaleY(1) scaleX(1); }
+    .hole { position: absolute; width: 40px; height: 18px; left: var(--x,50%); top: var(--y,60%); transform: translate(-50%, -50%); background: #7c5a3a; border-radius: 50%; z-index:1; }
+    .water { position: absolute; width: 40px; height: 18px; left: var(--x,50%); top: var(--y,60%); transform: translate(-50%, -50%); background: #4fc3f7; border-radius: 50%; opacity:0.7; z-index:3; animation: waterSplash 0.7s linear; }
+    @keyframes waterSplash { 0%{opacity:0.7;} 100%{opacity:0;} }
+    .step-btn { background: #e0f2e9; color: #009e2b; border: 1px solid #00b140; border-radius: 8px; padding: 8px 18px; font-size: 1rem; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+    .step-btn:disabled { background: #eee; color: #aaa; border: 1px solid #bbb; cursor: not-allowed; }
+  </style>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Juego de Reforestación Mejorado</h1>
+    <div class="info">
+      Organiza el espacio, espera el tiempo necesario y luego planta los árboles. Cada árbol que plantes permanecerá en el prado verde. ¡Haz crecer tu bosque!
+    </div>
+    <div class="level-info" id="level-info"></div>
+    <div class="score-info" id="score-info"></div>
+    <div id="game-area" style="background: #7be27b url('https://png.pngtree.com/thumb_back/fw800/background/20230527/pngtree-green-grass-field-cartoon-style-illustration-image_2727272.jpg') center/cover no-repeat; border: 2px solid #009e2b; min-height: 380px; min-width: 380px; position:relative;"></div>
+    <div id="plant-process" style="margin-top:18px; display:none; flex-direction:column; align-items:center; gap:10px;">
+      <button class="step-btn" id="prepare-btn">1. Organizar espacio</button>
+      <button class="step-btn" id="wait-btn" disabled>2. Esperar tiempo</button>
+      <button class="step-btn" id="dig-btn" disabled>3. Cavar hoyo</button>
+      <button class="step-btn" id="seed-btn" disabled>4. Sembrar semilla</button>
+      <button class="step-btn" id="cover-btn" disabled>5. Cubrir con tierra</button>
+      <button class="step-btn" id="water-btn" disabled>6. Regar</button>
+    </div>
+    <button class="plant-btn" id="start-plant-btn">Plantar árbol</button>
+    <button class="next-btn" id="next-btn" style="display:none;">Siguiente nivel</button>
+    <div class="msg" id="msg"></div>
+    <a class="volver" href="index.html">Volver al inicio</a>
+  </div>
+  <script>
+    // El juego de reforestación ha sido removido a solicitud del usuario.
+  </script>
+</body>
+</html>

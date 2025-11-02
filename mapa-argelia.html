@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Argelia, Antioquia</title>
+  <style>
+    body { background: #f6fff6; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #0001; padding: 32px; }
+    h1 { color: #00b140; }
+    a { color: #00b140; text-decoration: none; }
+    .volver { margin-top: 24px; display: block; }
+    iframe { border-radius: 12px; border: none; width: 100%; min-height: 480px; }
+    #logo-img, #logo-sena { position: fixed; top: 18px; width: 60px; height: 60px; border-radius: 10px; box-shadow: 0 2px 8px #0002; z-index: 1000; background: #fff8; padding: 4px; }
+    #logo-img { left: 18px; cursor: pointer; transition: all 0.3s; }
+    #logo-sena { right: 18px; }
+  </style>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header style="padding: 24px 0 10px 0; display: flex; flex-direction: column; align-items: center; background: transparent; position: relative;">
+  <img id="logo-img" src="https://st.depositphotos.com/1026266/4203/i/450/depositphotos_42034505-stock-photo-open-book-with-magical-green.jpg" alt="Logo Horizontes de Conciencia" onclick="mostrarLogoModal()" />
+    <img id="logo-sena" src="https://yt3.googleusercontent.com/lGolkVwfeyWWpyvb7Ljry29P5CFeYkNEp5EbO2PluoHVlJpVJ-n8UHidF6O0ubhJuqqImFzKHqA=s900-c-k-c0x00ffffff-no-rj" alt="Logo SENA" />
+  </header>
+  <div class="container">
+    <h1>Mapa de Argelia, Antioquia</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.180964146942!2d-75.1421859!3d5.7308589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46cf91d6346893%3A0x44ec777063a1ae12!2sArgelia%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1717180000000!5m2!1ses-419!2sco" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a class="volver" href="index.html">Volver al inicio</a>
+  </div>
+  <div style="margin-top: 40px; text-align: center;">
+    <h2 style="color:#00b140;">Video: Conoce Argelia, Antioquia</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7bP-JPaMW8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</body>
+</html>
